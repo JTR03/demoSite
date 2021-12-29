@@ -3,6 +3,8 @@ import Navbar from '../components/Navbar'
 import styles from '../styles/Home.module.css'
 import Image from 'next/image'
 import Mid from '../components/Mid'
+import Testimonial from '../components/Testimonial'
+import Footer from '../components/Footer'
 
 export default function Home() {
   return (
@@ -38,6 +40,8 @@ export default function Home() {
       </div>
       
       <Mid />
+      <Testimonial />
+      <Footer />
     </div>
   )
 }
