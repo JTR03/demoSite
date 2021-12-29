@@ -1,12 +1,20 @@
-import { Box, Button, IconButton, Typography } from '@mui/material'
+import { Box, Button, Grid, IconButton, Typography } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import data from '../components/data.js'
 import styles from '../styles/Home.module.css'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
-import ArrowBackIosIcon from '@mui/icons-material/ArrowForwardIos'
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 function Testimonial() {
     const [slide, setSlide] = useState(0)
+
+    const handlePrev = ()=>{
+        setSlide(slide - 1)
+    }
+
+    const handleNext = ()=>{
+        setSlide(slide + 1)
+    }
     useEffect(() => {
         const last = data.length - 1
         if(slide<0){
@@ -30,8 +38,15 @@ function Testimonial() {
             <Typography align='center' variant='h3' sx={{marginTop:10}}>
                 Testimonials
             </Typography>
-
-            <Box className={styles.section2}>
+            <Grid container justifyContent='center' >
+                <Grid item>
+<IconButton sx={{marginTop:6}} onClick={handlePrev}>
+                    <ArrowBackIosNewIcon sx={{fontSize:120}}/>
+                </IconButton>
+                 
+                </Grid>
+                <Grid item>
+    <Box className={styles.section2}>
                 {data.map((reviews,ind)=>{
                     const {id,name,text} = reviews;
                     let position = 'nextSlide'
@@ -45,18 +60,22 @@ function Testimonial() {
                     }
                     return(
                         <article className={position} key={id}>
-                            <Typography sx={{maxWidth:800}}>{text}</Typography>
+                            <Typography align='center' >{text}</Typography>
                             <Typography variant='h5' sx={{paddingTop:5}}>{name}</Typography>
                         </article>
                     )
                 })}
-                <IconButton className={styles.iconBtn}>
-                    <ArrowBackIosIcon />
-                </IconButton>
-                <IconButton className={styles.iconBtn}>
-                    <ArrowForwardIosIcon />
-                </IconButton>
+               
             </Box>
+                </Grid>
+                <Grid item>
+ <IconButton sx={{marginTop:6}} onClick={handleNext}>
+                    <ArrowForwardIosIcon  sx={{fontSize:120}}/>
+                </IconButton>
+                </Grid>
+            </Grid>
+        
+             
         </div>
     )
 }
