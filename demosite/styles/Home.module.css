@@ -77,12 +77,9 @@
   width: 912px;
   height: 1024;
   display: flex;
-  /* background: url('land.png'); */
 }
 .mid {
   align-items: center;
-  /* justify-content: center; */
-  /* flex-wrap: wrap; */
   margin-top: 50px;
   background: rgba(255, 255, 255, 0.8);
   
@@ -125,7 +122,13 @@
   padding-left: 100px;
   height: 80px;
 }
+.heading {
+  font-weight: 500;
+  font-size: 96px;
+  line-height: 112px;
+  margin: 170px 0;
 
+}
 /* .main {
   min-height: 100vh;
   padding: 4rem 0;
