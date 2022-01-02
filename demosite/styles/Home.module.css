@@ -41,7 +41,12 @@
  line-height: 40px;
  color: #000; 
  border: 2px solid #fe0000;
-  /* left: 54px;  */
+ cursor: pointer;
+}
+
+.btn:hover{
+  background-color: #fe0000;
+  opacity: 0.7;
 }
 .title {
   margin-left: 100px;
@@ -69,8 +74,13 @@
   line-height: 35px;
   color: #000;
   border: none;
+  cursor: pointer;
 }
-
+.btn2:hover{
+  background-color: aliceblue;
+  transition:all 0.1s linear;
+  border: 1px solid black;
+}
 .img {
   margin-left: 100px;
   margin-top: 100px;
@@ -129,6 +139,17 @@
   margin: 170px 0;
 
 }
+
+.rndcard {
+  margin-top: 110px;
+  padding: 0 40px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 160px;
+  width: 377px;
+  height: 467px;
+}
+
 /* .main {
   min-height: 100vh;
   padding: 4rem 0;

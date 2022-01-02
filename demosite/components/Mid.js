@@ -59,7 +59,7 @@ function Mid() {
                     })}
                     </Grid>
                     <Grid container justifyContent='center'>
-                        <Button sx={{marginTop:10,marginBottom:10,fontSize:25,background:'#fe0000',color:'#000'} }>
+                        <Button href='/services' sx={{marginTop:10,marginBottom:10,fontSize:25,background:'#fe0000',color:'#000'} }>
                         All Services
                     </Button>
                 

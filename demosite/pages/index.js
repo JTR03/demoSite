@@ -22,7 +22,10 @@ export default function Home() {
        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </Typography>
       <button className={styles.btn2}>
-        About Us
+        <a href='/about'>
+           About Us
+        </a>
+       
       </button>
       </div>
       

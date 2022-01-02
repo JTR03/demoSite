@@ -27,7 +27,7 @@ function Testimonial() {
     useEffect(() => {
         let slider = setInterval(()=>{
             setSlide(slide+1)
-        },5000)
+        },10000)
         return () => {
             clearInterval(slider)
         }
