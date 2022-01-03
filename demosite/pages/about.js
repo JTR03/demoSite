@@ -9,9 +9,9 @@ function about() {
     return (
         <div className={styles.container}>
             <Navbar />
-            <Typography align='center' className={styles.heading}>
+            <h1 className={styles.heading}>
                 About Us
-            </Typography>
+            </h1>
             <About />
             <History />
             <Footer />

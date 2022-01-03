@@ -1,4 +1,3 @@
-import { Typography } from '@mui/material'
 import React from 'react'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
@@ -9,9 +8,9 @@ function services() {
     return (
         <div className={styles.container}>
             <Navbar />
-            <Typography align='center' className={styles.heading}> 
+            <h1 className={styles.heading}> 
                 Services
-            </Typography>
+            </h1>
             <Offers />
             <Footer />
         </div>

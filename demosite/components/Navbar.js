@@ -1,7 +1,8 @@
 import React from 'react'
 import Styles from '../styles/Home.module.css'
 import Toolbar from '@mui/material/Toolbar'
-import { Box, Link, Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
+import Link from 'next/link'
 
 const items = [
     {
@@ -35,8 +36,8 @@ function Navbar() {
                     {items.map((item)=>{
                         const {id,page,url} = item
                         return(
-                             <Link key={id} href={url} underline='none' className={Styles.items}>
-                            {page}
+                            <Link key={id} href={url} >
+                           <a className={Styles.items}> {page}</a> 
                         </Link>
                         )
                        
