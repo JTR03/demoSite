@@ -5,19 +5,22 @@ import styles from '../styles/Home.module.css'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt'
 
 const content = [
-    {
+    { 
+        id:1,
         title: "Service 1",
         text:` sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
         Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
          adipisci velit, sed quia non numquam eius modi tempora.`
     },
-    {
+    { 
+        id:2,
         title: "Service 2",
         text:` quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
          nulla pariatur. Excepteur sint occaecat cupidatat non .`
     },
     {
+        id:3,
         title: "Service 3",
         text:`  ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
          laudantium, totam rem aperiam, eaque ipsa quae ab illo
@@ -35,16 +38,17 @@ function Mid() {
 
                 <Grid container spacing={14.125} direction='row' justifyContent='center' sx={{paddingLeft:9.45,paddingRight:9.45}} > 
                     {content.map((items)=>{
+                        const {title,text,id} = items
                         return(
                             
-                            <Grid item xs={4}>
+                            <Grid item xs={4} key={id}>
                         <Card sx={{background:'#535050',color:'#fff'}} className={styles.card}>
                             <CardContent>
                                 <Typography align='center' variant='h5' sx={{paddingBottom:4}}>
-                                    {items.title}
+                                    {title}
                                 </Typography>
                                 <Typography>
-                                 {items.text}
+                                 {text}
                                 </Typography>
                             </CardContent>
                             <CardActions sx={{justifyContent:'center',paddingBottom:4}}>

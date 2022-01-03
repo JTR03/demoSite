@@ -1,4 +1,4 @@
-import { Button, Grid } from '@mui/material'
+import { Button, Grid, Stack } from '@mui/material'
 import React from 'react'
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import PhoneIcon from '@mui/icons-material/Phone';
@@ -15,23 +15,31 @@ function Form() {
                   <Grid container spacing={10} justifyContent='center' >
 
                  <Grid item md={4} >
-                    <MailOutlineIcon sx={{paddingLeft:8,fontSize:120}}/>
-                    <Typography >
+                     <Stack direction='column' alignItems='center' justifyContent='center'>
+                        <MailOutlineIcon/>
+                          <Typography >
                         www.email@email.com
                     </Typography>
+                     </Stack>
+                    
+                   
                   </Grid>
                    <Grid item md={4}>
-                    <LinkedInIcon  sx={{paddingLeft:10,fontSize:125}}/>
-                    <Typography align='center'>
+                   <Stack direction='column' alignItems='center' justifyContent='center'>
+                    <LinkedInIcon />
+                    <Typography>
                         LinkedIn
                     </Typography>
+                    </Stack>
                   </Grid>  
                              
                   <Grid item md={4}>
-                      <PhoneIcon  sx={{paddingLeft:8,fontSize:120}}/>
-                      <Typography align='center'>
+                  <Stack direction='column' alignItems='center' justifyContent='center'>
+                      <PhoneIcon  />
+                      <Typography >
                         0832173223
                     </Typography>
+                    </Stack>
                   </Grid>             
             </Grid>
             </Box>
