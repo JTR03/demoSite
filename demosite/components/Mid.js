@@ -2,7 +2,6 @@ import { Button, Card, CardActions, CardContent, Typography,Container } from '@m
 import Grid from '@mui/material/Grid'
 import React from 'react'
 import styles from '../styles/Home.module.css'
-import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt'
 
 const content = [
     { 
@@ -36,12 +35,12 @@ function Mid() {
 {/*  */}  <Container maxWidth={false}  >
 
 
-                <Grid container spacing={14.125} direction='row' justifyContent='center' sx={{paddingLeft:9.45,paddingRight:9.45}} > 
+                <Grid container spacing={2} direction='row' justifyContent='center' sx={{paddingLeft:{xs:2.5,sm:6.8,md:9.45},paddingRight:{xs:2.5,sm:6.8,md:9.45}}} > 
                     {content.map((items)=>{
                         const {title,text,id} = items
                         return(
                             
-                            <Grid item xs={4} key={id}>
+                            <Grid item xs={12} md={4} key={id}>
                         <Card sx={{background:'#535050',color:'#fff'}} className={styles.card}>
                             <CardContent>
                                 <Typography align='center' variant='h5' sx={{paddingBottom:4}}>

@@ -38,10 +38,10 @@ function Testimonial() {
             <Typography align='center' variant='h3' sx={{marginTop:10}}>
                 Testimonials
             </Typography>
-            <Grid container justifyContent='center' >
+            <Grid container direction={'row'} justifyContent='center' >
                 <Grid item>
-<IconButton sx={{marginTop:6}} onClick={handlePrev}>
-                    <ArrowBackIosNewIcon sx={{fontSize:120}}/>
+<IconButton sx={{marginTop:{xs:16,sm:9,md:6}}} onClick={handlePrev}>
+                    <ArrowBackIosNewIcon sx={{fontSize:{xs:25,sm:40,md:120}}}/>
                 </IconButton>
                  
                 </Grid>
@@ -69,8 +69,8 @@ function Testimonial() {
             </Box>
                 </Grid>
                 <Grid item>
- <IconButton sx={{marginTop:6}} onClick={handleNext}>
-                    <ArrowForwardIosIcon  sx={{fontSize:120}}/>
+ <IconButton sx={{marginTop:{xs:16,sm:9,md:6}}} onClick={handleNext}>
+                    <ArrowForwardIosIcon  sx={{fontSize:{xs:25,sm:40,md:120}}}/>
                 </IconButton>
                 </Grid>
             </Grid>

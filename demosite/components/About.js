@@ -1,13 +1,14 @@
-import { Typography,Box, Grid } from '@mui/material'
+import { Typography,Box, Grid, Container } from '@mui/material'
 import React from 'react'
 import styles from '../styles/Home.module.css'
 
 function About() {
     return (
         <div className={styles.mid}>
-            <Grid container spacing={28.75} sx={{marginTop:24.25,paddingBottom:11}}>
-                <Grid item>
-                        <Box sx={{marginLeft:12.5,maxWidth:380}}>
+            <Container sx={{marginTop:10,paddingTop:10}}>
+            <Grid container spacing={2} sx={{paddingTop:{xs:4,md:20},paddingBottom:11}}>
+                <Grid item sm={12} md={6}>
+                        <Box sx={{marginLeft:{xs:5,sm:6.8,md:12.5},maxWidth:{xs:380,sm:900}}}>
                 <Typography variant='h6'>
                 A Little Bit More About Us
             </Typography>
@@ -16,12 +17,12 @@ function About() {
             </Typography>
             </Box>
                 </Grid>
-                <Grid item>
-  <Box sx={{width:620}}>
-                <Typography variant='h3'>
+                <Grid item sm={12} md={6}>
+  <Box sx={{width:{xs:300,sm:660,md:620},paddingLeft:{xs:5,sm:6.8,md:0}}}>
+                <Typography variant='h3' sx={{fontSize:{xs:'1.6em',md:'3em'}}}>
 rem ipsum dolor sit amet, consectetur adipiscing elit.
                 </Typography>
-                <Typography sx={{paddingTop:5}}>
+                <Typography sx={{paddingTop:{xs:3,md:5}}}>
                 
                  Nam hendrerit nisi sed sollicitudin pellentesque. Nunc
                   posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique
@@ -47,7 +48,7 @@ rem ipsum dolor sit amet, consectetur adipiscing elit.
             </Grid>
         
             
-          
+          </Container>
             
         </div>
     )

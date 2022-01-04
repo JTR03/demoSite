@@ -11,11 +11,11 @@ import Typography from '@mui/material/Typography'
 function Form() {
     return (
         <div className={styles.mid}>
-            <Box sx={{marginRight:40,marginLeft:40}}>
-                  <Grid container spacing={10} justifyContent='center' >
+            <Box sx={{marginRight:{xs:20,md:40},marginLeft:{xs:20,md:40},marginTop:10,paddingTop:10}}>
+                  <Grid container spacing={4} justifyContent='center' >
 
-                 <Grid item md={4} >
-                     <Stack direction='column' alignItems='center' justifyContent='center'>
+                 <Grid item xs={12} sm={4} md={4} >
+                     <Stack spacing={2} direction='column' alignItems='center' justifyContent='center'>
                         <MailOutlineIcon/>
                           <Typography >
                         www.email@email.com
@@ -24,8 +24,8 @@ function Form() {
                     
                    
                   </Grid>
-                   <Grid item md={4}>
-                   <Stack direction='column' alignItems='center' justifyContent='center'>
+                   <Grid item xs={12} sm={4}>
+                   <Stack spacing={2} direction='column' alignItems='center' justifyContent='center'>
                     <LinkedInIcon />
                     <Typography>
                         LinkedIn
@@ -33,8 +33,8 @@ function Form() {
                     </Stack>
                   </Grid>  
                              
-                  <Grid item md={4}>
-                  <Stack direction='column' alignItems='center' justifyContent='center'>
+                  <Grid item xs={12} sm={4}>
+                  <Stack spacing={2} direction='column' alignItems='center' justifyContent='center'>
                       <PhoneIcon  />
                       <Typography >
                         0832173223
@@ -44,7 +44,7 @@ function Form() {
             </Grid>
             </Box>
           
-            <Box sx={{marginTop:12.5,marginRight:40,marginLeft:40, paddingBottom:10}}>
+            <Box sx={{marginTop:12.5,marginRight:{xs:5,sm:10,md:40},marginLeft:{xs:5,sm:10,md:40}, paddingBottom:10}}>
                 <Grid spacing={2} container justifyContent='center'>
                 <Grid item xs={12} md={6}> 
                 <Grid container spacing={4.5}>

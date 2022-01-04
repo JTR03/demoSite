@@ -15,11 +15,7 @@
  height: 53px;
 }
 
-.pageContainer {
-  width: 452px;
-  height: 24px;
-  left:745px;
-  top: 29px;
+.landing {
   display: flex;
 }
 
@@ -105,6 +101,7 @@
   width: 90vw;
   margin: auto;
   max-width: 1170px;
+  
 }
 
 .section2 {
@@ -140,17 +137,72 @@
   text-align: center;
 
 }
-
-.rndcard {
-  margin-top: 110px;
-  padding: 0 40px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 160px;
-  width: 377px;
-  height: 467px;
+.div{
+  width: 40%;
 }
 
+@media (max-width:600px){
+  .heading{
+    font-size: 50px;
+    margin: 40px 0;
+  }
+  .nav{
+    margin: 0 26px;
+  }
+  .landing{
+    display: block;
+  }
+  .img{
+    width: fit-content;
+    height: fit-content;
+    margin: 25px;
+  }
+  .title{
+    margin-left: 25px;
+    margin-top: 60px;
+  }
+  .description{
+    margin-left: 25px;
+    width: 310px;
+  }
+  .section2{
+    width: 60vw;
+  }
+}
+@media (max-width: 900px) {
+  .btn {
+    display: none;  
+  }
+  .nav{
+    margin: 0 74px;
+  }
+  .img{
+    width: fit-content;
+    height: fit-content;
+  }
+  .title{
+    margin-left: 70px;
+    margin-top: 100px;
+  }
+  .description{
+    margin-left: 70px;
+    margin-right: 70px;
+    width: fit-content;
+  
+  }
+  .landing{
+    display: block;
+  }
+  .btn2{
+    margin-left: 75px;
+  }
+  .div2{
+    width: 100%;
+  }
+  .section2{
+    width: 70vw;
+  }
+}
 /* .main {
   min-height: 100vh;
   padding: 4rem 0;
@@ -229,9 +281,4 @@
 } */
 
 
-@media (max-width: 600px) {
-  .nav {
-    display: none;
-    flex-direction: column;
-  }
-}
+

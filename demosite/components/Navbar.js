@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Styles from '../styles/Home.module.css'
 import Toolbar from '@mui/material/Toolbar'
 import { Box, Typography } from '@mui/material'
 import Link from 'next/link'
+import MenuIcon from '@mui/icons-material/Menu'
+import IconButton from '@mui/material/IconButton'
+import Drawer from '@mui/material/Drawer'
+import List from '@mui/material/List'
+import ListItem from '@mui/material/ListItem'
 
 const items = [
     {
@@ -27,12 +32,20 @@ const items = [
     }]
 
 function Navbar() {
+    const [state, setState] = useState(false)
+
+    const handleState = ()=>{
+        setState(true)
+    }
+
+    const handleClose = ()=>{
+        setState(false)
+    }
     return (
-        
-           
+
                 <Toolbar disableGutters className={Styles.nav}>
                     <Typography  sx={{flexGrow:1, display:'flex'}}>LOGO</Typography>
-                <Box className={Styles.pageContainer}>
+                <Box sx={{display:{sm:'block',xs:'none'}}}>
                     {items.map((item)=>{
                         const {id,page,url} = item
                         return(
@@ -45,11 +58,35 @@ function Navbar() {
 
                         
                     )}
-                    
-                </Box>
-                <button className={Styles.btn}>
+                    <button className={Styles.btn}>
                         more
                     </button>
+                </Box>
+                <Box sx={{display:{sm:'none'}}}>
+                    <IconButton onClick={handleState}>
+                        <MenuIcon />
+                    </IconButton>
+                    <Drawer 
+                    anchor='right'
+                    open={state}
+                    onClick={handleClose}
+                    >
+                        {items.map((item)=>{
+                            const {id,page,url} = item
+                            return(
+                                <List key={id}>
+                                    <ListItem>
+                                        <Link href={url}>
+                                        {page}
+                                        </Link>
+                                        
+                                    </ListItem>
+                                </List>
+                            )
+                        })}
+                    </Drawer>
+                </Box>
+                
                 </Toolbar>
                 
            

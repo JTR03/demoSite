@@ -1,5 +1,6 @@
-import { Typography,Grid,Box } from '@mui/material'
+import Grid from '@mui/material/Grid'
 import React from 'react'
+import Typography from '@mui/material/Typography'
 
 function History() {
     return (
@@ -7,11 +8,11 @@ function History() {
             <Typography align='center' sx={{marginTop:10,marginBottom:4.375}}>
                 HISTORY
             </Typography>
-            <Typography align='center' variant='h3' >
+            <Typography align='center' variant='h3' sx={{fontSize:{xs:'2.1em',md:'3em'}}}>
                 We Are Passionate About<br /> What We Do
             </Typography>
 
-            <Grid container spacing={15} sx={{marginTop:0,marginBottom:10,paddingLeft:12.5,paddingRight:12.5}}>
+            <Grid container spacing={15} sx={{marginTop:0,marginBottom:10,paddingLeft:{xs:5,sm:10,md:12.5},paddingRight:{xs:5,sm:10,md:12.5}}}>
                 <Grid item xs={12} md={8} lg={6}>
                      <Typography variant='h4'>
                          Our Origin

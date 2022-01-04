@@ -9,8 +9,8 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Navbar />
-      <div style={{display:'flex'}}>
-        <div style={{width:'40%'}}>
+      <div className={styles.landing}>
+        <div className={styles.div2}>
         <h1 className={styles.title}>
         Leading Company <br /> In Industry
       </h1>

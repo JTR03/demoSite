@@ -64,22 +64,22 @@ function offers() {
                 <Container maxWidth={false}  >
 
 
-<Grid container spacing={12.125} direction='row' justifyContent='center' sx={{paddingLeft:9.45,paddingRight:16}} > 
+<Grid container spacing={5} direction='row' justifyContent='center' sx={{paddingLeft:{xs:2,md:9.45},paddingRight:{xs:2,md:9.45}}} > 
     {services.map((items)=>{
         const{id,title,text} = items
         return(
             
-            <Grid key={id} item xs={4}>
-        <Card sx={{background:'#535050',color:'#fff'}} className={styles.rndcard}>
+            <Grid key={id} item xs={12} sm={6} md={4} >
+        <Card sx={{background:'#535050',color:'#fff',borderRadius:{xs:5, sm:10,md:35},marginTop:11}}>
             <CardContent>
-                <Typography align='center' variant='h5' sx={{paddingTop:5,paddingBottom:5}}>
+                <Typography align='center' variant='h5' sx={{paddingTop:5}}>
                     {title}
                 </Typography>
-                <Typography>
+                <Typography sx={{padding:{xs:0}}}>
                  {text}
                 </Typography>
             </CardContent>
-            <CardActions sx={{justifyContent:'center',paddingBottom:4,paddingTop:5}}>
+            <CardActions sx={{justifyContent:'center',paddingBottom:4}}>
                 <Button  sx={{background:'#fff9f9',color:'#000'}}>
                     Learn More
                 </Button>
