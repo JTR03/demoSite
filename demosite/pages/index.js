@@ -10,7 +10,7 @@ export default function Home() {
     <div className={styles.container}>
       <Navbar />
       <div className={styles.landing}>
-        <div className={styles.div2}>
+        <div className={styles.div}>
         <h1 className={styles.title}>
         Leading Company <br /> In Industry
       </h1>

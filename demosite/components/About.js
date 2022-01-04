@@ -5,10 +5,10 @@ import styles from '../styles/Home.module.css'
 function About() {
     return (
         <div className={styles.mid}>
-            <Container sx={{marginTop:10,paddingTop:10}}>
+            <Container maxWidth={false} sx={{marginTop:10,paddingTop:10}}>
             <Grid container spacing={2} sx={{paddingTop:{xs:4,md:20},paddingBottom:11}}>
                 <Grid item sm={12} md={6}>
-                        <Box sx={{marginLeft:{xs:5,sm:6.8,md:12.5},maxWidth:{xs:380,sm:900}}}>
+                        <Box sx={{marginLeft:{xs:5,sm:6.8,md:9},maxWidth:{xs:380,sm:900,md:380}}}>
                 <Typography variant='h6'>
                 A Little Bit More About Us
             </Typography>
